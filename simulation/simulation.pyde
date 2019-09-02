@@ -6,10 +6,10 @@ from colors import SHEEP_COLORS
 
 
 # Parametros da simulacao
-SIM_WIDTH = 1200
+SIM_WIDTH = 800
 SIM_HEIGHT = 800
 FOOD_SIZE = 5  # precisa ser um multiplo comum de SIM_WIDTH e SIM_HEIGHT
-N_AGENTS = 10
+N_AGENTS = 1
 
 # Lista de agentes e recursos
 sheeps = list()

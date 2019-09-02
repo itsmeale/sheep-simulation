@@ -1,4 +1,5 @@
-from colors import WHITE
+from colors import WHITE, YELLOW
+from random import randint
 
 
 class Sheep:
@@ -15,7 +16,20 @@ class Sheep:
             'move': 1,
             'reproduction': self.reproduction_energy*.8
         }
-    
+        
+        # E se adicionarmos uma mutacao?
+        if random(0, 100) < 1:
+            self.mutation()
+            
+    def mutation(self):
+        self.color = color(randint(1, 255), randint(1, 255), randint(1, 255))
+        self.speed *= random(0, 2)
+        self.reproduction_energy *= random(0.5, 2)
+        self.energy_comsumption = {
+            'move': 1*random(0,2),
+            'reproduction': self.reproduction_energy*random(0,2)
+        }
+
     def move(self):
         """ Faz a ovelha se movimentar
         de acordo com sua velocidade em
